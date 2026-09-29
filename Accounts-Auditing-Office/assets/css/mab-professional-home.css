@@ -1,0 +1,87 @@
+
+/* MAB Professional Home Page Enhancements */
+.mab-home .hero,
+.mab-home .hero-section {
+  position: relative;
+  overflow: hidden;
+}
+.mab-home .hero::before,
+.mab-home .hero-section::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7,25,49,.94) 0%, rgba(7,25,49,.78) 46%, rgba(7,25,49,.20) 100%);
+  pointer-events:none;
+}
+.mab-home .hero > .container,
+.mab-home .hero-section > .container { position: relative; z-index: 2; }
+
+.mab-home .visual-card {
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 320px;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,.18), transparent 32%),
+    linear-gradient(135deg,#0b355d,#1d6b8f 55%,#d8a63a);
+  box-shadow: 0 20px 55px rgba(5,25,45,.20);
+  position: relative;
+}
+.mab-home .visual-card::after {
+  content: "";
+  position: absolute; inset: 18px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 16px;
+}
+.mab-home .visual-card .visual-content {
+  position:absolute; left:28px; right:28px; bottom:28px;
+  color:#fff; z-index:2;
+}
+.mab-home .visual-card .visual-content h3 { font-weight:700; margin-bottom:8px; }
+.mab-home .visual-card .visual-content p { opacity:.9; margin:0; }
+
+.mab-home .feature-image {
+  min-height: 260px; border-radius: 20px; overflow:hidden;
+  background:
+    linear-gradient(135deg, rgba(5,35,65,.08), rgba(212,166,58,.22)),
+    linear-gradient(135deg,#eaf2f7,#dce9ef);
+  position:relative;
+}
+.mab-home .feature-image::before {
+  content:"";
+  position:absolute; width:150px; height:150px; border-radius:50%;
+  right:12%; top:14%; background:rgba(20,91,126,.18);
+  box-shadow: -100px 100px 0 rgba(212,166,58,.18);
+}
+.mab-home .feature-image::after {
+  content:"";
+  position:absolute; left:10%; right:10%; bottom:12%;
+  height:35%; border-radius:14px 14px 4px 4px;
+  background:linear-gradient(160deg, rgba(255,255,255,.95), rgba(255,255,255,.45));
+  box-shadow:0 18px 35px rgba(10,40,60,.10);
+}
+
+.mab-home .story-card,
+.mab-home .blog-card {
+  border:0; border-radius:18px; overflow:hidden;
+  box-shadow:0 12px 35px rgba(10,35,55,.09);
+  transition:transform .25s ease, box-shadow .25s ease;
+  height:100%;
+}
+.mab-home .story-card:hover,
+.mab-home .blog-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(10,35,55,.14);
+}
+.mab-home .section-kicker {
+  text-transform:uppercase; letter-spacing:.14em; font-size:.78rem;
+  font-weight:700; color:#b58724;
+}
+.mab-home .home-section-title { font-weight:800; color:#092b4a; }
+
+@media (max-width: 767.98px) {
+  .mab-home .visual-card { min-height:240px; }
+  .mab-home .hero::before,
+  .mab-home .hero-section::before {
+    background:linear-gradient(180deg, rgba(7,25,49,.92), rgba(7,25,49,.55));
+  }
+}
